@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <!-- Page Meta -->
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="AIIMS Hospital and University" name="description">
+  <meta content="Hospital, Emergency, AIIMS, University, Medical, Institution, Government hospital, Government"
+    name="keywords">
+  <meta content="CDAC" name="author">
+
+  <!-- Title Meta -->
+  <title>Institution | AIIMS Rajkot</title>
+  <link href="../assets/icons/favicon.png" rel="icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Thirdparty CSS -->
+  <link href="../assets/thirdparty/css/animate.min.css" rel="stylesheet">
+  <link href="../assets/thirdparty/css/aos.min.css" rel="stylesheet">
+
+  <link href="../assets/thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../assets/thirdparty/data-tables/datatables.min.css" />
+
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    -->
+  <link href="../assets/thirdparty/css/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/thirdparty/css/boxicons.min.css" rel="stylesheet">
+
+  <link href="../assets/thirdparty/fontawesome/css/all.min.css" rel="stylesheet">
+  <link href="../assets/thirdparty/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/thirdparty/css/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link href="../assets/css/styles.css" rel="stylesheet">
+
+  <script>
+    /* API Loaders */
+
+    function openBase64(doctype, docid) {
+      
+      $.ajax({
+        url: 'http://10.226.28.236:8084//Aiims_Portal/service/notices/base64',
+        type: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        data: { 'hospitalcode': 24922, 'docid': docid, 'doctype': doctype },
+        transformRequest: function (obj) {
+          var str = [];
+          for (var p in obj)
+            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+          return str.join("&");
+        },
+        success: function (result) { // after success your get data
+          const  resultJSON = JSON.parse(result);
+          let pdfWindow = window.open("");
+          pdfWindow.document.write(
+            "<iframe width='100%' height='100%' src='data:application/pdf;base64," +resultJSON.base64+ "'></iframe>"
+          )
+        },
+        error: function (result) {
+          alert("API error - " + result.message);
+        }
+      });
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <!-- Title Section -->
+  <div id="title-section" class="d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-around">
+      <!-- Logo -->
+      <div class="align-items-center me-auto">
+        <!-- Add class="d-none" to remove the logo in mobile version -->
+        <a href="../index.html" class="logo me-auto"><img src="../assets/img/title-logo.png" alt=""></a>
+      </div>
+      <!-- Titles -->
+      <div class="row text-center d-md-flex titles">
+        <h5 class="md-none mt-1">अखिल भारतीय आयुर्विज्ञान संस्थान, राजकोट, गुजरात</h5>
+        <h5 class="md-none">અખિલ ભારતીય આયુર્વિજ્ઞાન સંસ્થા, રાજકોટ, ગુજરાત</h5>
+        <h4> ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RAJKOT, GUJARAT</h4>
+        <p class="md-none mb-0">(A Central Autonomous Institute of National Importance under Pradhan Mantri Swasthya
+          Suraksha
+          Yojna (PMSSY),<br>
+          Ministry of Health, Government of India)
+        </p>
+      </div>
+      <div class="d-md-flex title-buttons row">
+        <button class="pushable"
+          onclick="window.open('https://aiimsrajkot.prd.dcservices.in/AHIMSG5/hissso/loginLogin')">
+          <span class="front">
+            HIS Login
+          </span>
+        </button>
+        <!-- <span class="screen-reader-buttons  justify-content-center">
+          <button class="btn">A+</button>
+          <button class="btn">A</button>
+          <button class="btn">A-</button>
+        </span>
+        <button class="btn">Screen Reader</button> -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Menu Bar Section -->
+  <header id="menu" class="">
+    <div class="container d-flex align-items-center justify-content-center">
+      <div id="menu-title" class="menu-title title-buttons">
+        <a href="https://aiimsrajkot.prd.dcservices.in/AHIMSG5/hissso/loginLogin" target="_blank" class="menu-btn">HIS
+          Login</a>
+      </div>
+      <!-- menu links -->
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul class="navbar-links">
+          <li><a class="nav-link scrollto" href="../index.html">Home</a></li>
+
+          <li class="dropdown">
+            <a class="nav-link" href="#title-section"><span>HealthCare</span><i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="../pages/ipd.html"><span>InPatient</span></a>
+                <!-- <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="pages/ipd.html">InPatient Status</a></li>
+                  <li><a href="pages/ipd.html">Insurance</a></li>
+                  <li><a href="pages/ipd.html">Checkout Process</a></li>
+                  <li><a href="pages/ipd.html">Visitor Policy</a></li>
+                  <li><a href="pages/ipd.html">Queries and FAQs</a></li>
+                </ul> -->
+              </li>
+              <li class="dropdown"><a href="../pages/opd.html"><span>Out Patient</span><i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../pages/opd.html">Departments</a></li>
+                  <li><a href="../pages/opd.html">Find a Doctor</a></li>
+                  <li><a href="../pages/opd.html">Online Appointment</a></li>
+                  <li><a href="../pages/opd.html">Schedule & Timings</a></li>
+                </ul>
+              </li>
+              <!-- <li><a href="#emergency">Emergency Ward</a></li> -->
+              <li><a href="https://esanjeevaniopd.in/" target="_blank">Tele-Consultation</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a class="nav-link" href="../index.html#services"><span>Health Services</span><i
+                class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="../index.html#services">Labs and diagnostics</a></li>
+              <li><a href="../index.html#services">Pharmacy</a></li>
+              <li><a href="https://www.eraktkosh.in/" target="_blank">Blood bank</a></li>
+              <!-- <li><a href="#emergency">Emergency Services</a></li> -->
+              <li><a href="../index.html#goi">Allied organizations</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a class="nav-link" href="../pages/academics.html"><span>Academics</span><i
+                class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="../pages/academics.html">Courses</a></li>
+              <li><a href="../pages/academics.html">Library</a></li>
+              <li><a href="../pages/academics.html">Research Projects</a></li>
+              <li><a href="../pages/academics.html">Hostel</a></li>
+              <li><a href="../pages/academics.html">Rules and Guidelines</a></li>
+              <li><a href="../pages/academics.html">Admissions</a></li>
+            </ul>
+          </li>
+
+          <!-- <li class="dropdown"><a class="nav-link" href="../pages/portals.html"><span>Portals</span><i
+                class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Student</a></li>
+              <li><a href="#">Faculty</a></li>
+              <li><a href="#">Doctor</a></li>
+              <li><a href="#">Medical Staff</a></li>
+              <li><a href="#">Employee</a></li>
+              <li><a href="#">Patient</a></li>
+            </ul>
+          </li> -->
+
+
+          <li class="dropdown"><a class="nav-link" href="../pages/gallery.html"><span>Gallery</span><i
+                class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="../pages/gallery.html">Hospital</a></li>
+              <li><a href="../pages/gallery.html">University</a></li>
+              <li><a href="../pages/gallery.html">Events</a></li>
+              <li><a href="../pages/gallery.html">Annual Reports</a></li>
+              <li><a href="../pages/gallery.html">E-Magazines</a></li>
+              <li><a href="../pages/gallery.html">Documents Archive</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a class="nav-link" href="../pages/notices.html"><span>Notices</span><i
+                class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="../pages/notices.html">Recruitment</a></li>
+              <li><a href="../pages/notices.html">Admissions</a></li>
+              <li><a href="../pages/notices.html">Press Releases</a></li>
+              <li><a href="../pages/notices.html">Events</a></li>
+              <li><a href="../pages/notices.html">Tenders</a></li>
+              <!-- <hr class="mt-0 mb-0">
+              <li><a href="pages/notices.html">Students</a></li>
+              <li><a href="pages/notices.html">Faculty</a></li>
+              <li><a href="pages/notices.html">Employees</a></li>
+              <li><a href="pages/notices.html">Patient</a></li> -->
+            </ul>
+          </li>
+
+          <li class="dropdown"><a class="nav-link" href="../pages/institute.html"><span>Institution</span><i
+                class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="../pages/institute.html">About</a></li>
+              <li><a href="../pages/institute.html">Organization</a></li>
+              <li><a href="../pages/institute.html">Dignitaries</a></li>
+              <li><a href="../pages/institute.html">Key Administrators</a></li>
+              <li><a href="../pages/institute.html">Core Committees</a></li>
+              <li><a href="../pages/institute.html">Directory</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav-link scrollto" href="../index.html#contact">Contact Us</a></li>
+        </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- CTA Button -->
+      <!-- <a href="#appointment" class="menu-btn scrollto ms-auto"><span class="d-none d-md-inline">Book an</span>
+        Appointment</a> -->
+    </div>
+  </header>
+
+
+
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Institution</h2>
+          <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li>Institution</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <!-- API loader  -->
+    <div class="api-loader">
+      <div class="loaderBar"></div>
+    </div>
+
+    <div id="departments" class="departments">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- Tab Headers -->
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+                  <h4>About Us</h4>
+                </a>
+              </li>
+              <li class="nav-item mt-2" id="organization-card">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+                  <h4>Organization</h4>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <h4>Dignitaries</h4>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+                  <h4>Key Administrators</h4>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
+                  <h4>Core Committees & Cells</h4>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-6">
+                  <h4>Directory</h4>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-7">
+                  <h4>Documents</h4>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tab Content-->
+          <div class="col-lg-9">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <section id="about" class="about">
+                  <div class="container" data-aos="fade-up">
+
+                    <div class="text-center mb-3">
+                      <h2>All India Institute of Medical Sciences</h2>
+                      <p>All India Institute of Medical Sciences, Rajkot in Gujarat is one amongst the several new
+                        AIIMS, being
+                        established under the Ptradhan Mantri Swasthya Suraksha Yojna (PMSSY) of the Ministry of Health
+                        and Family
+                        Welfare, Government of India.</p>
+                    </div>
+                    <div class="row align-items-center">
+                      <div class="col-lg-6 text-center" data-aos="fade-right">
+                        <img src="../assets/img/logo.png" class="img-fluid p-0 float" style="float:none" alt="">
+                        <h4> AIIMS Rajkot, Gujarat </h4>
+                      </div>
+                      <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+                        <h5>The trinity of the mission of the Institute is:</h5>
+                        <ul>
+                          <li><i class="bi bi-check-circle"></i>Education of diverse health professionals</li>
+                          <li><i class="bi bi-check-circle"></i>Research in biomedical sciences; and </li>
+                          <li><i class="bi bi-check-circle"></i>Patient care at the highest care level.</li>
+                        </ul>
+                        <h6>The Objectives of AIIMS are mentioned in the AIIMS Act 1956 (as amended)</h6>
+                        <ul>
+                          <li><i class="bi bi-check-circle"></i> To develop pattern of teaching in under-graduate and
+                            postgraduate medical education in all its branches so as to demonstrate a high standard of
+                            medical education to all medical colleges and other allied institutions in India.</li>
+                          <li><i class="bi bi-check-circle"></i> To bring together in one place educational facilities
+                            of the highest order for the training of personnel in all branches of health activities.
+                          </li>
+                          <li><i class="bi bi-check-circle"></i> To attain self-sufficiency in post-graduate medical
+                            education</li>
+                        </ul>
+                      </div>
+                      <p class="about-ender">
+                        AIIMS, Rajkot has objectives to reduce the “gaps” in affordable tertiary
+                        health care, and to generate ‘wellness’ amongst the general population. AIIMS, Rajkot is under
+                        the phase six
+                        of the Pradhan Mantri Swasthya Suraksha Yojna (PMSSY). AIIMS Rajkot shall be a 750 bedded
+                        hospital with
+                        multiple speciality as well as superspeciality departments. The Project cost of construction is
+                        about Rs.
+                        1195 Crores, which includes an allocation of Rs. 185 Crores towards state-of-the art medical
+                        equipment. The
+                        Government of Gujarat has allotted about 201 Acres of Land for the project and shall take care
+                        of access
+                        roads, water facilities and provision of electricity connection.
+                      </p>
+                    </div>
+
+                  </div>
+                </section>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <section class="text-center">
+                  <h2>Organization</h2>
+                  <table id="organization-table" class="text-center" width="100%">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Title</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                </table>
+                </section>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <section id="dignitaries" class="dignitaries">
+                  <div class="container" data-aos="fade-up">
+
+                    <div class="text-center mb-3">
+                      <h2>Dignitaries</h2>
+                      <p>Key notes from our Dignitaries</p>
+                    </div>
+
+                    <!-- Dignitaries Cards -->
+                    <div class="row justify-content-between">
+
+                      <div class="col-lg-5 col-md-6 d-flex btn" data-bs-toggle="modal"
+                        data-bs-target="#president-modal">
+                        <div class="member" data-aos="fade-up" data-aos-delay="300">
+                          <div class="member-img p-0">
+                            <img style="float: none;" src="../assets/img/dignitaries/image-3.jpg" class="img-fluid"
+                              alt="">
+                          </div>
+                          <div class="member-info">
+                            <h4>Dr. P K Dave</h4>
+                            <span>President - All India Institute of Medical Sciences, Rajkot</span>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="col-lg-5 col-md-6 d-flex btn" data-bs-toggle="modal" data-bs-target="#director-modal">
+                        <div class="member" data-aos="fade-up" data-aos-delay="400">
+                          <div class="member-img p-0">
+                            <img style="float: none;" src="../assets/img/dignitaries/image-4.jpg" class="img-fluid"
+                              alt="">
+                          </div>
+                          <div class="member-info">
+                            <h4>Dr. CDS Katoch</h4>
+                            <span>Executive Director - All India Institute of Medical Sciences, Rajkot</span>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- Dignitaries Content -->
+                    <div>
+
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <section id="services" class="services">
+                  <div class="container" data-aos="fade-up">
+
+                    <div class="text-center mb-3">
+                      <h2>Key Administrators</h2>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-4 col-md-4 testimonial-item btn" data-bs-toggle="modal"
+                        data-bs-target="#dda-modal" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon"><img src="../assets/img/administrators/DDA.png" class="testimonial-img"></div>
+                        <h4 class="">Shramdeep Sinha</h4>
+                        <p class="description">Deputy Director (Administration)</p>
+                      </div>
+                      <div class="col-lg-3 col-md-4 testimonial-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon"><img src="../assets/img/administrators/blank panel.jpg"
+                            class="testimonial-img"></div>
+                        <h4 class="">No Name</h4>
+                        <p class="description">Financial Advisor</p>
+                      </div>
+                      <div class="col-lg-3 col-md-4 testimonial-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon"><img src="../assets/img/administrators/blank panel.jpg"
+                            class="testimonial-img"></div>
+                        <h4 class=""><a href="">No Name</a></h4>
+                        <p class="description">Superintending engineer</p>
+                      </div>
+                      <div class="col-lg-3 col-md-4 testimonial-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon"><img src="../assets/img/administrators/blank panel.jpg"
+                            class="testimonial-img"></div>
+                        <h4 class=""><a href="">No Name</a></h4>
+                        <p class="description">Dean (Academics)</p>
+                      </div>
+                      <div class="col-lg-3 col-md-4 testimonial-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon"><img src="../assets/img/administrators/blank panel.jpg"
+                            class="testimonial-img"></div>
+                        <h4 class="tile"><a href="">No Name</a></h4>
+                        <p class="description">Dean (Research)</p>
+                      </div>
+                      <div class="col-lg-3 col-md-4 testimonial-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon"><img src="../assets/img/administrators/blank panel.jpg"
+                            class="testimonial-img"></div>
+                        <h4 class=""><a href="">No Name</a></h4>
+                        <p class="description">Dean (Examinations)</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <section id="committees">
+                  <div class="text-center mb-3">
+                    <h2 class="mb-3">Core Committees & Cells</h2>
+                  </div>
+
+                  <h5 class="mt-5 mb-2">Coordinators and Faculty In-charge</h5>
+                  <table class="mb-3 display" id="committee-table-1" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name&nbsp;
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                        <th>
+                          Faculty in-Charge
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr Vivek Kumar Sharma</span>
+                        </td>
+                        <td>
+                          <span>Professor &amp; Head D/o
+                            Physiology</span>
+                        </td>
+                        <td>
+                          <span>Academics</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Deepak Parchwani</span>
+                        </td>
+                        <td>
+                          <span>Additional Professor D/o
+                            Biochemistry&nbsp;</span>
+                        </td>
+                        <td>
+                          <span>Research</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Rajesh Kathrotia</span>
+                        </td>
+                        <td>
+                          <span>Additional Professor D/o
+                            Physiology</span>
+                        </td>
+                        <td>
+                          <span>Nodal Officer HITES&nbsp;</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">Academic activity committee </h5>
+                  <table class="mb-3 display" id="committee-table-2" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr Vivek Kumar Sharma</span>
+                        </td>
+                        <td>
+                          <span>Professor &amp; HoD., Dept. Of Physiology</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Simmi Mehra</span>
+                        </td>
+                        <td>
+                          <span>Professor & HoD., Dept. Of Anatomy&nbsp;</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Deepak Parchwani</span>
+                        </td>
+                        <td>
+                          <span>Additional Professor, Dept. Of Bio Chemistry </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">Library Committee </h5>
+                  <table class="mb-3 display" id="committee-table-3" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name&nbsp;
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Rohin Garg</span>
+                        </td>
+                        <td>
+                          <span>Associate Professor Dept. Of Anatomy</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Gaurav Sharma</span>
+                        </td>
+                        <td>
+                          <span>Assistant Professor Dept. Of Physiology&nbsp;</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Anita Motiani</span>
+                        </td>
+                        <td>
+                          <span>Assistant l Professor Dept. Of Bio Chemistry </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">MBBS Admission </h5>
+                  <table class="mb-3 display" id="committee-table-4" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name&nbsp;
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Vivek Kumar Sharma</span>
+                        </td>
+                        <td>
+                          <span>Professor & HoD Dept. Of Physiology</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Pradeep Chauhan</span>
+                        </td>
+                        <td>
+                          <span>Assistant Professor Dept. Of Anatomy</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">Hostels and Mess Activities Committee</h5>
+                  <table class="mb-3 display" id="committee-table-5" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name&nbsp;
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                        <th>
+                          Committee Position
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Simmi Mehra</span>
+                        </td>
+                        <td>
+                          <span>Professor &amp; Head D/o Anatomy</span>
+                        </td>
+                        <td>
+                          <span>Provost; Girls Hostel</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Ragini Singh</span>
+                        </td>
+                        <td>
+                          <span>Associate Professor D/o Biochemistry &nbsp;</span>
+                        </td>
+                        <td>
+                          <span>Assistant Provost; Girls Hostel</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Sundip Charmode</span>
+                        </td>
+                        <td>
+                          <span>Additional Professor D/o Anatomy</span>
+                        </td>
+                        <td>
+                          <span>Provost; Boys Hostel</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Naresh Parmar</span>
+                        </td>
+                        <td>
+                          <span>Assistant Professor D/o Physiology</span>
+                        </td>
+                        <td>
+                          <span>Assistant Provost; Boys Hostel</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">Examination Section (CRC)</h5>
+                  <table class="mb-3 display" id="committee-table-6" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                        <th>
+                          Committee Position
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Rajeshkumar Kathrotia</span>
+                        </td>
+                        <td>
+                          <span>Additional Professor, Dept. Of
+                            Physiology</span>
+                        </td>
+                        <td>
+                          <span>In-Charge</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Gaurav Sharma</span>
+                        </td>
+                        <td>
+                          <span>Assistant Professor, Dept. Of
+                            Physiology</span>
+                        </td>
+                        <td>
+                          <span>Co-Incharge</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">Consignee Receipt Committee (CRC)</h5>
+                  <table class="mb-3 display" id="committee-table-7" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Rajeshkumar Kathrotia</span>
+                        </td>
+                        <td>
+                          <span>Additional Professor, Dept. Of
+                            Physiology</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Sundip Charmode</span>
+                        </td>
+                        <td>
+                          <span>Associate Professor, Dept. Of
+                            Physiology</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Ragini Singh </span>
+                        </td>
+                        <td>
+                          <span>Associate Professor, Dept. Of Bio
+                            Chemistry </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">IT Committee</h5>
+                  <table class="mb-3 display" id="committee-table-8" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Chitturi Vinay</span>
+                        </td>
+                        <td>
+                          <span>Assistant Professor D/o
+                            Physiology</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Amit D. Sonagara</span>
+                        </td>
+                        <td>
+                          <span>Assistant Professor D/o Biochemistry
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Naresh Parmar</span>
+                        </td>
+                        <td>
+                          <span>Assistant Professor D/o
+                            Physiology</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">Store Committee</h5>
+                  <table class="mb-3 display" id="committee-table-9" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Rajeshkumar Kathrotia</span>
+                        </td>
+                        <td>
+                          <span>Additional Professor, Dept. Of
+                            Physiology</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Sundip Charmode</span>
+                        </td>
+                        <td>
+                          <span>Associate Professor, Dept. Of
+                            Physiology</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Ragini Singh </span>
+                        </td>
+                        <td>
+                          <span>Associate Professor, Dept. Of Bio
+                            Chemistry </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">Local Purchase Committee</h5>
+                  <table class="mb-3 display" id="committee-table-10" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Rajeshkumar Kathrotia</span>
+                        </td>
+                        <td>
+                          <span>Additional Professor, Dept. Of
+                            Physiology</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Deepak Parchwani</span>
+                        </td>
+                        <td>
+                          <span>Additional Professor, Dept. Of Bio
+                            Chemistry </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Pradip Chauhan </span>
+                        </td>
+                        <td>
+                          <span>Assistant Professor, Dept. Of
+                            Anatomy</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">Final Acceptance Certificate (FAC) committee</h5>
+                  <table class="mb-3 display" id="committee-table-11" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Vivek Kumar Sharma</span>
+                        </td>
+                        <td>
+                          <span>Professor &amp; HoD., Dept. Of
+                            Physiology</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Simmi Mehra</span>
+                        </td>
+                        <td>
+                          <span>Professor &amp; HoD., Dept. Of
+                            Anatomy</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Deepak Parchwani</span>
+                        </td>
+                        <td>
+                          <span>Additional Professor, Dept. Of Bio
+                            Chemistry </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">Local Purchase Committee for Bio Chemistry Department</h5>
+                  <table class="mb-3 display" id="committee-table-12" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Deepak Parchwani</span>
+                        </td>
+                        <td>
+                          <span>Additional Professor D/o Bio Chemistry
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Sagar Dholariya</span>
+                        </td>
+                        <td>
+                          <span>Assistant Professor D/o
+                            Biochemistry</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">Local Purchase Committee for Physiology Department</h5>
+                  <table class="mb-3 display" id="committee-table-13" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Vivek Kumar Sharma</span>
+                        </td>
+                        <td>
+                          <span>Professor, Department of
+                            Physiology</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Naresh Parmar</span>
+                        </td>
+                        <td>
+                          <span>Assistant Professor D/o
+                            Physiology</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <h5 class="mt-5 mb-2">Local Purchase Committee for Anatomy Department</h5>
+                  <table class="mb-3 display" id="committee-table-14" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Designation
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span>Dr. Simmi Mehra</span>
+                        </td>
+                        <td>
+                          <span>Professor &amp; HoD. Dept. Of
+                            Anatomy</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span>Dr. Pradip Chauhan</span>
+                        </td>
+                        <td>
+                          <span>Assistant Professor D/o Anatomy</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </section>
+              </div>
+              <div class="tab-pane" id="tab-6">
+                <section>
+                  <div class="text-center mb-3">
+                    <h2>Directory of AIIMS (January 2021)</h2>
+                    <div class="d-flex text-center justify-content-between">
+                      <div>
+                        PAN: AAAGA2473E
+                      </div>
+                      <div>
+                        &nbsp;&nbsp;&nbsp;GSTIN: 24AAAGA2473E1ZZ
+                      </div>
+                      <div style="color:#aaaaaa">
+                        &nbsp;&nbsp;&nbsp;(Disclaimer: This is not a seniority list)
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <table width="100%">
+                      <thead>
+                        <tr>
+                          <th>
+                            S.No.
+                          </th>
+                          <th>
+                            Designation</th>
+                          <th>
+                            Name</th>
+                          <th>
+                            E-Mail</th>
+                          <th>
+                            Telephone
+                            Number</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            <strong>President</strong>
+                          </td>
+                          <td>
+                            Dr. P. K. Dave</td>
+                          <td>
+                            davepk39@yahoo.com</td>
+                          <td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            PPS to President</td>
+                          <td>
+                            vacant
+                          </td>
+                          <td>
+                          </td>
+                          <td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            <strong>Executive Director</strong>
+                          </td>
+                          <td>
+                            Prof. Dr. (Colonel) C D S Katoch</td>
+                          <td>
+                            ed.aiimsrajkot@gmail.com</td>
+                          <td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            4
+                          </td>
+                          <td>
+                            PA to the ED</td>
+                          <td>
+                            Indrajit Singh Jadeja</td>
+                          <td>
+                            ps.ed.aiimsrajkot@gmail.com</td>
+                          <td>
+                            9574642734</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            5
+                          </td>
+                          <td>
+                            Steno to ED</td>
+                          <td>
+                            D. S. Rana</td>
+                          <td>
+                          </td>
+                          <td>
+                            8238394194</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            6
+                          </td>
+                          <td>
+                            <strong>Deputy Director<br />
+                              (Administration)</strong>
+                          </td>
+                          <td>
+                            Shramdeep Sinha, IRS</td>
+                          <td>
+                            dda.aiimsrajkot@gmail.com</td>
+                          <td>
+                            9422145255<br />
+                            6354122094</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            7
+                          </td>
+                          <td>
+                            PS to DD (A)</td>
+                          <td>
+                            Z. Bhatt (Ms.)</td>
+                          <td>
+                            ps.dda.aiimsrajkot@gmail.com</td>
+                          <td>
+                            9328017241</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            8
+                          </td>
+                          <td>
+                            Consultant (Administration)</td>
+                          <td>
+                            Mr. Bharat Lehru, Retired SSO, Indian Railways</td>
+                          <td>
+                            adm.consultantaiimsrajkot@gmail.com</td>
+                          <td>
+                            7046700704</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            9
+                          </td>
+                          <td>
+                            Consultant (Finance)</td>
+                          <td>
+                            Mr. Sanjay C. Shah, Retd. Sr.AO<br />
+                            O/o CGA of India</td>
+                          <td>
+                            finance.consultantaiimsrajkot@gmail.com</td>
+                          <td>
+                            9429502059</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            10
+                          </td>
+                          <td>
+                            Nodal Officer (HITES)</td>
+                          <td>
+                            Dr. Rajesh Kathrotia</td>
+                          <td>
+                            rajeshkathrotia@yahoo.com</td>
+                          <td>
+                            8194071234</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            11
+                          </td>
+                          <td>
+                            Provost (Girls Hostel)</td>
+                          <td>
+                            Dr. Simmi Mehra</td>
+                          <td>
+                            docsims27july@gmail.com</td>
+                          <td>
+                            9929399941</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            12
+                          </td>
+                          <td>
+                            Provost (Boys Hostel)</td>
+                          <td>
+                            Dr. Sundip Charmode</td>
+                          <td>
+                            sundip.charmode@yahoo.com</td>
+                          <td>
+                            9633239685</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            13
+                          </td>
+                          <td>
+                            Financial Advisor/Ex-officio Finance Officer</td>
+                          <td>
+                            Shramdeep Sinha, IRS</td>
+                          <td>
+                          </td>
+                          <td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            14
+                          </td>
+                          <td>
+                            DDO, AIIMS Rajkot</td>
+                          <td>
+                            Shri Amit Mundra, DDO AIIMS Jodhpur (Additional Charge)</td>
+                          <td>
+                            ddoaiimsrajkot@gmail.com</td>
+                          <td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            15
+                          </td>
+                          <td>
+                            Superintending<br />
+                            Engineer</td>
+                          <td>
+                            vacant</td>
+                          <td>
+                          </td>
+                          <td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            16
+                          </td>
+                          <td>
+                            Faculty in-charge (Academics)</td>
+                          <td>
+                            Dr. Vivek Kumar Sharma</td>
+                          <td>
+                            drviveksharmazen@gmail.com</td>
+                          <td>
+                            8668117030</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            17
+                          </td>
+                          <td>
+                            Faculty in-charge<br />
+                            (Examinations)</td>
+                          <td>
+                            Dr. Simmi Mehra</td>
+                          <td>
+                            docsims27july@gmail.com</td>
+                          <td>
+                            9929399941</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            18
+                          </td>
+                          <td>
+                            Faculty in-charge (Research)</td>
+                          <td>
+                            Dr. Deepak Parchwani</td>
+                          <td>
+                            drdeepakparchwani@yahoo.com</td>
+                          <td>
+                            7600024672</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <h4 class="mt-4 mb-1">
+                      Anatomy
+                    </h4>
+                    <table width="100%">
+                      <thead>
+                        <tr>
+                          <th>
+                            S.No.
+                          </th>
+                          <th>
+                            Designation</th>
+                          <th>
+                            Name</th>
+                          <th>
+                            E-Mail</th>
+                          <th>
+                            Telephone
+                            Number</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            <strong>Professor &amp; Head</strong>
+                          </td>
+                          <td>
+                            Dr. Simmi Mehra</td>
+                          <td>
+                            docsims27july@gmail.com</td>
+                          <td>
+                            9929399941</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            Associate Professor</td>
+                          <td>
+                            Dr. Sundip Charmode</td>
+                          <td>
+                            sundip.charmode@yahoo.com</td>
+                          <td>
+                            9633239685</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            Associate Professor</td>
+                          <td>
+                            Dr. Rohin Garg</td>
+                          <td>
+                            rohingarg99@gmail.com</td>
+                          <td>
+                            8192848265</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            4
+                          </td>
+                          <td>
+                            Assistant Professor</td>
+                          <td>
+                            Dr. Pradip Chuuhan</td>
+                          <td>
+                            prajjawalit@gmail.com</td>
+                          <td>
+                            8866199560</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <h4 class="mt-4 mb-1">
+                      Biochemistry
+                    </h4>
+                    <table width="100%">
+                      <thead>
+                        <tr>
+                          <th>
+                            S.No.
+                          </th>
+                          <th>
+                            Designation</th>
+                          <th>
+                            Name</th>
+                          <th>
+                            E-Mail</th>
+                          <th>
+                            Telephone
+                            Number</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            <strong>Additional Professor &amp;
+                              Head</strong>
+                          </td>
+                          <td>
+                            Dr. Deepak Parchwani</td>
+                          <td>
+                            drdeepakparchwani@yahoo.com</td>
+                          <td>
+                            7600024672</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            Associate Professor</td>
+                          <td>
+                            Dr. Ragini Singh</td>
+                          <td>
+                            singh.ragini28@yahoo.com</td>
+                          <td>
+                            9624000839</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            Assistant Professor</td>
+                          <td>
+                            Dr. Sagar Dholariya</td>
+                          <td>
+                            drsagar.dholariya@gmail.com</td>
+                          <td>
+                            9428282513</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            4
+                          </td>
+                          <td>
+                            Assistant Professor</td>
+                          <td>
+                            Dr. Amit Sonagara</td>
+                          <td>
+                            amitsonagra@gmail.com</td>
+                          <td>
+                            9712972232</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            5
+                          </td>
+                          <td>
+                            Assistant Professor</td>
+                          <td>
+                            Dr. Anita Motiani</td>
+                          <td>
+                            motiani.anita23@gmail.com</td>
+                          <td>
+                            9045802978</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <h4 class="mt-4 mb-1">
+                      Physiology
+                    </h4>
+                    <table width="100%">
+                      <thead>
+                        <tr>
+                          <th>
+                            S.No.
+                          </th>
+                          <th>
+                            Designation</th>
+                          <th>
+                            Name</th>
+                          <th>
+                            E-Mail</th>
+                          <th>
+                            Telephone
+                            Number</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            <strong>Professor &amp; Head</strong>
+                          </td>
+                          <td>
+                            Dr Vivek Kumar Sharma</td>
+                          <td>
+                            drviveksharmazen@gmail.com</td>
+                          <td>
+                            8668117030</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            Additional Professor</td>
+                          <td>
+                            Dr. Rajesh Kothrotia</td>
+                          <td>
+                            rajeshkathrotia@yahoo.com</td>
+                          <td>
+                            8194071234</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            Associate Professor</td>
+                          <td>
+                            Dr. Pradip Barde</td>
+                          <td>
+                            bardepb@gmail.com</td>
+                          <td>
+                            9021416946</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            4
+                          </td>
+                          <td>
+                            Assistant Professor</td>
+                          <td>
+                            Dr. Gaurav Sharma</td>
+                          <td>
+                            drgauravsharma.jnmc@gmail.com</td>
+                          <td>
+                            7417574751</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            5
+                          </td>
+                          <td>
+                            Assistant Professor</td>
+                          <td>
+                            Dr. Chitturi Vinay</td>
+                          <td>
+                            vinaychitturi1729@gmail.com</td>
+                          <td>
+                            9968969775</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            6
+                          </td>
+                          <td>
+                            Assistant Professor</td>
+                          <td>
+                            Dr. Naresh Parmar</td>
+                          <td>
+                            parmarnaresh674@gmail.com</td>
+                          <td>
+                            9099024546</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </div>
+              <div class="tab-pane" id="tab-7">
+                <section class="text-center">
+                  <h2>Documents</h2>
+                  <div class="justify-content-between">
+                    <a href="https://aiimsrajkot.edu.in/wp-content/uploads/2021/02/AIIMS-Rajkot-notification-Gazette-4th-December-2019.pdf"
+                      target="_blank" class="menu-btn my-2">
+                      AIIMS Rajkot Gazette
+                    </a>
+                    <a href="https://aiimsrajkot.edu.in/wp-content/uploads/2021/02/AIIMS_Amendement_Act_2012.pdf"
+                      target="_blank" class="menu-btn my-2">
+                      AIIMS Amendement Act 2012
+                    </a>
+                    <a href="https://aiimsrajkot.edu.in/wp-content/uploads/2021/02/Aims-Act-1956-Rules-1958-Regulations-1999.pdf"
+                      target="_blank" class="menu-btn my-2">
+                      AIIMS Act, Rules and Regulations
+                    </a>
+                    <a href="https://aiimsrajkot.edu.in/wp-content/uploads/2021/08/AIIMS-Rajkot-Logo-Concept-Note.pdf"
+                      target="_blank" class="menu-btn my-2">
+                      AIIMS Rajkot Logo Concept
+                    </a>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main><!-- End #main -->
+
+  <!-- ========= Modals Section ========= -->
+
+
+  <!-- DIGNITARIES MODALS -->
+  <!-- President Modal -->
+  <div class="modal fade" id="president-modal" tabindex="-1" aria-labelledby="president-modal-label" aria-hidden="true"
+    data-backdrop="false"> 
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="president-modal-label">President's Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          &nbsp;&nbsp;&nbsp; Dr. Pradeep Kumar Dave has been nominated as the President of AIIMS, Rajkot vide Gazette
+          notification dated
+          11th March 2020.
+          <br>
+          &nbsp;&nbsp;&nbsp;Dr.Pradeep Kumar Dave is an orthopaedic surgeon. He graduated from the All India Institute
+          of Medical
+          Sciences, New Delhi (AIIMS, Delhi) and joined the Institute as a member of faculty. He rose to become the
+          Director of AIIMS Delhi from where he superannuated in the year 2003. He has continued his passion for
+          medicine as Chairman of Rockland Hospital as well as in capacity of Advisor Chairman of the Medeor Hospital.
+          Prof. Dave is a former editor of the Indian Journal of Orthopaedics and has served as the President of the
+          Association of Spine Surgeons of India. He is an Emeritus Professor of the National Academy of Medical
+          Sciences (NAMS) and is a Fellow of Royal College of Physicians and Surgeons of Glasgow, Indian Orthopaedics
+          Association, National Academy of Medical Sciences, International Medical Science Academy, and the Indian
+          chapter of the International College of Surgeons. The Government of India awarded him the fourth highest
+          civilian award of the Padma Shri in 2000, for his services in the fields of ecology and environment.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Director Modal -->
+  <div class="modal fade" id="director-modal" tabindex="-1" aria-labelledby="director-modal-label" aria-hidden="true"
+    data-backdrop="false">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="director-modal-label">Executive Director's Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          &nbsp;&nbsp;&nbsp;Prof Dr ( Col ) CDS Katoch is alumnus of Government Medical College, Jammu and joined Army
+          Medical corps in
+          1987. He belongs to a small town, Khaira- Palampur of Himachal Pradesh popularly known as mini Indian
+          Switzerland and DEV Bhoomi. He has a small family of two sons and wife Dr (Major) Mrs Shashi Katoch (Retd) is
+          a Dental Surgeon. He post graduated in Internal Medicine in 1997 from Delhi University and then
+          superspecialised in Pulmonary Medicine in 2005 from Pune University. He is Undergraduate and Postgraduate
+          teacher in Medicine and Pulmonary Medicine. He is examiner and assessor of National Board of Examination. He
+          has guided dozens of National and International postgraduate medical students at Armed Forces Medical College
+          Pune. He has many national and international publications to his credit. He has exposure of various
+          appointments in civil and army adding to his vast experience.
+          <br><br>
+          &nbsp;&nbsp;&nbsp;His association with people of different attitudes and attributes during his service
+          exposure itself speaks
+          volumes of his human approach of his conduct. He has always adopted a humane approach while dealing with
+          medical and administrative issues. Its this approach which makes Prof Katoch very popular among his students
+          and patients.
+          <br><br>
+          &nbsp;&nbsp;&nbsp;Prof CDS Katoch superannuated from Army Medical Corps in July 2020 after 34 years of
+          glorious service. He was
+          Prof and Head of Department of Pulmonary, Critical Care and Sleep medicine at Army Institute of Cardiothoracic
+          Sciences, AFMC Pune. As a clinician, bed side skills and Pulmonary Interventions are very close to his heart
+          and he has a passion for Research and Academics. Prof Dr CDS Katoch is a member of various national and
+          International professional organizations and is reviewer of many professional journals.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-target="#director-message-modal"
+            data-bs-toggle="modal">View Director's Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Director's Message Modal -->
+  <div class="modal fade" id="director-message-modal" tabindex="-1" aria-labelledby="director-message-modal-label"
+    aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="director-message-modal-label">Executive Director's Message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          I feel proud upon assuming the office of Executive Director AIIMS Rajkot Gujarat. AIIMS Rajkot is one of the
+          Institute of National Importance (INI) .The main thrust of the institute will be to develop the budding Indian
+          medical graduates holistically and make them take over the role of first contact in preventive, promotive and
+          comprehensive medical care. Inculcation of clinical skills and judicious use of medical technology will be
+          part of the curriculum. The Undergraduate curriculum will be modeled as per changing scenarios and
+          developments. More objective ways of assessment will be adopted in phase manner.
+          <br>
+          As we grow with time patient care will take a lead. We have kept our milestone of starting OPD services for
+          our esteemed patients by December 2021 to March 2022 in the new campus and IPD by June to September 2022. To
+          extend rural and Urban tertiary health care services at the new campus will be our priority.
+          <br>
+          We will strive hard to establish post graduate & postdoctoral studies, Dental and Nursing college, sooner than
+          later. We look forward to having MOUs with national and international INIs in various fields.AYUSH will be an
+          integral part of our health care delivery. Institute faculty and students will be provided an ambience to
+          promote research and publication.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-target="#director-modal" data-bs-toggle="modal">View
+            Director's Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMINISTRATORS MODALS -->
+  <div class="modal fade" id="dda-modal" tabindex="-1" aria-labelledby="dda-modal-label" aria-hidden="true"
+    data-backdrop="false">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dda-modal-label">Deputy Director (Administration) Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>Shramdeep Sinha (श्रमदीप सिन्हा) IRS </h5>
+          Shramdeep Sinha (श्रमदीप सिन्हा) is an Indian Revenue Service (IRS) Officer of 2004 Batch.He is on deputation
+          to PMSSY, Ministry of Health and Family Welfare since March 2018. He joined his deputation duties in March
+          2018 as founder Deputy Director (Administration) of AIIMS,Mangalagiri. And also served as Officer on Special
+          Duty to the President, AIIMS, Mangalagiri. He was instrumental in commencement of Medical college and OPD in
+          AIIMS Mangalagiri. He also held additional charge of AIIMS, Bhopal for over an year and during the challenging
+          times of COVID pandemic. He has been laterally shifted to AIIMS Rajkot in November 2020. He is an alumni of
+          University of Allahabad from where he completed his post-graduation with Gold Medal. He was enrolled as
+          CSIR-JRF before being selected in Civil Services Examination in the year 2004 (CSE 2003). He is also an alumni
+          of IIM-Bangalore from where he completed his PGPPM (2013-15) with one semester in Syracuse University of New
+          York. He has recently attended a mid-career course in ISB Hyderabad and Duke, USA. He has served Additional
+          Director-cum-Faculty in the prestigious National Academy of Direct Taxes, Nagpur, Maharashtra. As faculty he
+          has been a Course Director for Orientation batch of newly promoted Assistant Commissioners of Income Tax, and
+          has taken sessions for IRS officers of India and Tax administrators of SAARC and Common Wealth Nations.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm">
+            <div class="footer-info">
+              <h3>All India Institute of Medical Sciences, Rajkot</h3>
+              <p>(AIIMS), Khanderi, Para Pipaliya,<br> Rajkot, Gujarat, India, 360006</p>
+              <strong>Phone:</strong> +123 456 7890<br>
+              <strong>Email:</strong> dda [dot] aiimsrajkot [at] gmail [dot] com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://twitter.com/aiimsrajkot" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/aiimsrajkot/" target="_blank" class="facebook"><i
+                    class="bi bi-facebook"></i></a>
+                <a href="https://m.youtube.com/channel/UC0aNCYXJTCnDXBs4T4-zIOQ" class="google-plus"><i
+                    class="bi bi-youtube"></i></a>
+                <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
+                <img src="../assets/img/govt-icons/google-play.png" alt="" class="img-fluid app-store-image"
+                  onclick="window.open('https://play.google.com/store/apps/details?id=com.cdac.aiimsrajkot&hl=en_IN&gl=US')" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm footer-links">
+            <h4>Important Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="../pages/rti.html">Right to Information</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../pages/privacy-statement.html">Privacy Statement</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../pages/terms-of-use.html">Terms of use</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://www.mohfw.gov.in/" target="_blank">MOHFW</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm footer-links">
+            <h4>Other AIIMS</h4>
+            <div class="row">
+              <div class="col-sm">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://aiims.edu/" target="_blank">Delhi</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://www.aiimsbhopal.edu.in/"
+                      target="_blank">Bhopal</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://aiimsbhubaneswar.nic.in/"
+                      target="_blank">Bhuvaneswar</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://www.aiimsjodhpur.edu.in/"
+                      target="_blank">Jodhpur</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://aiimspatna.org/" target="_blank">Patna</a>
+                  </li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://aiimskalyani.edu.in/"
+                      target="_blank">Kalyani</a></li>
+                </ul>
+              </div>
+              <div class="col-sm">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://www.aiimsdeoghar.edu.in/"
+                      target="_blank">Deoghar</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://aiimsbathinda.edu.in/"
+                      target="_blank">Bathinda</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://www.aiimsraipur.edu.in/"
+                      target="_blank">Raipur</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://aiimsrishikesh.edu.in/"
+                      target="_blank">Rishikesh</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://aiimsrbl.edu.in/"
+                      target="_blank">Raebareli</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://www.aiimsmangalagiri.edu.in/"
+                      target="_blank">Mangalagiri</a></li>
+                </ul>
+              </div>
+              <div class="col-sm">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <a href="http://aiimsnagpur.edu.in/"
+                      target="_blank">Nagpur</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://aiimsgorakhpur.edu.in/"
+                      target="_blank">Gorakhpur</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="https://aiimsbibinagar.edu.in/"
+                      target="_blank">Bibinagar</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ender">
+      <div class="copyright">
+        &copy; Copyright 2022 <strong><span>AIIMS Rajkot</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Developed by <a href="https://cdac.in/">Centre for Development of Advanced Computing</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Page Home Scroller -->
+  <a href="#" class="scroll-up d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Thirdparty JS -->
+  <script src="../assets/thirdparty/purecounter/purecounter.js"></script>
+  <script src="../assets/thirdparty/js/aos.js"></script>
+  <!-- <script src="assets/thirdparty/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="../assets/thirdparty/js/glightbox.min.js"></script>
+  <script src="../assets/thirdparty/js/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="../assets/thirdparty/JQuery/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="../assets/thirdparty/JQuery/jquery.dataTables.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/institution.js"></script>
+</body>
+
+</html>
