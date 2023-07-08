@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rajkot-hospital
+  labels:
+    app: rajkot-hospital
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rajkot-hospital
+  template:
+    metadata:
+      labels:
+        app: rajkot-hospital
+    spec:
+      containers:
+        - name: rajkot-hospital
+          image: harikrishnan586/rajkothospitalimg:v1
+          ports:
+            - containerPort: 8099
