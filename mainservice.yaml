@@ -2,10 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rajkot-hospital
-  labels:
-    app: rajkot-hospital
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: rajkot-hospital
@@ -15,7 +13,24 @@ spec:
         app: rajkot-hospital
     spec:
       containers:
-        - name: rajkot-hospital
-          image: harikrishnan586/rajkothospitalimg:v1
-          ports:
-            - containerPort: 8099
+      - name: rajkot-hospital
+        image: 572679073520.dkr.ecr.ap-south-1.amazonaws.com/automated-deployment
+        ports:
+        - containerPort: 8080
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: rajkot-hospital-service
+spec:
+  selector:
+    app: rajkot-hospital
+  type: NodePort
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+    nodePort: 32760
+    protocol: TCP
