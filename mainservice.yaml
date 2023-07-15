@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rajkot-hospital
-        image: 572679073520.dkr.ecr.ap-south-1.amazonaws.com/automated-deployment
+        image: 572679073520.dkr.ecr.ap-south-1.amazonaws.com/ecrpush
         ports:
         - containerPort: 8080
 
